@@ -33,7 +33,7 @@ function Weather() {
 
   return (
     <div className="app-container">
-      <h1 className="title">🌤️ Nimbus</h1>
+      <h1 className="title">🌤️ Knimbus</h1>
       <br />
       <div className="weather-box">
         <div className="search-box">
