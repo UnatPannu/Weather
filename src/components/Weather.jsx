@@ -1,16 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './styles/weather.css';
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  CartesianGrid
-} from 'recharts';
-
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 function Weather() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
