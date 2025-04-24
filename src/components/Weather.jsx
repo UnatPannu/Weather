@@ -97,18 +97,15 @@ function Weather() {
               <div className="temp-main">{weather.current.temp_c}°C</div>
             </div>
             <div className="right">
-              <div className="label">Precipitation: 0%</div>
+              <div className="label">Precipitation: {weather.current.condition.text}</div>
               <div className="label">Humidity: {weather.current.humidity}%</div>
               <div className="label">Wind: {weather.current.wind_kph} km/h</div>
               <div className="label">{new Date(weather.location.localtime).toLocaleString()}</div>
-              <div className="label">{weather.current.condition.text}</div>
             </div>
           </div>
 
           <div className="tabs-row">
             <span className="tab active">Temperature</span>
-            <span className="tab">Precipitation</span>
-            <span className="tab">Wind</span>
           </div>
 
           <ResponsiveContainer width="100%" height={200}>
