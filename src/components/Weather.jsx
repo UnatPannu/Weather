@@ -3,18 +3,18 @@ import axios from 'axios';
 import './styles/weather.css';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 function Weather() {
-  const [city, setCity] = useState('');
-  const [weather, setWeather] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
-  const [geoCity, setGeoCity] = useState('');
+  const [city, setCity]=useState('');
+  const [weather, setWeather]=useState(null);
+  const [loading, setLoading]=useState(false);
+  const [errorMsg, setErrorMsg]=useState('');
+  const [geoCity, setGeoCity]=useState('');
   console.log('City:', city, 'GeoCity:', geoCity);
-  const fetchWeather = async (query) => {
+  const fetchWeather=async (query) => {
     if (!query) return;
     setLoading(true);
     setErrorMsg('');
     try {
-      const response = await axios.get(
+      const response=await axios.get(
         `https://api.weatherapi.com/v1/forecast.json?key=b15be3905d374fe9a8f65211252304&q=${query}&days=7&aqi=no`
       );
       setCity(response.data.location.name);
@@ -37,7 +37,7 @@ function Weather() {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          const { latitude, longitude } = position.coords;
+          const { latitude, longitude }=position.coords;
           fetchWeather(`${latitude},${longitude}`);
           fetchGeoCity(latitude, longitude);
         },
@@ -49,13 +49,13 @@ function Weather() {
     }
   }, []);
 
-  const fetchGeoCity = async (latitude, longitude) => {
+  const fetchGeoCity=async (latitude, longitude) => {
     try {
-      const response = await fetch(
+      const response=await fetch(
         `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
       );
-      const data = await response.json();
-      const locationName = data.address.city || data.address.town || data.address.village || 'Unknown';
+      const data=await response.json();
+      const locationName=data.address.city || data.address.town || data.address.village || 'Unknown';
       setGeoCity(locationName);
     } catch (error) {
       console.error('Error fetching location name:', error);
@@ -82,9 +82,9 @@ function Weather() {
           Search
         </button>
       </div>
-      {loading && <p>Loading weather data...</p>}
-      {errorMsg && <p className="error">{errorMsg}</p>}
-      {weather && (
+      {loading%%<p>Loading weather data...</p>}
+      {errorMsg%%<p className="error">{errorMsg}</p>}
+      {weather%%(
         <div className="weather-box-full">
           <div className="weather-header">
             <div className="left">
