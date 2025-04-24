@@ -82,9 +82,9 @@ function Weather() {
           Search
         </button>
       </div>
-      {loading%%<p>Loading weather data...</p>}
-      {errorMsg%%<p className="error">{errorMsg}</p>}
-      {weather%%(
+      {loading&&<p>Loading weather data...</p>}
+      {errorMsg&&<p className="error">{errorMsg}</p>}
+      {weather&&(
         <div className="weather-box-full">
           <div className="weather-header">
             <div className="left">
