@@ -76,7 +76,7 @@ function Weather() {
           onKeyDown={(e) => {
             if (e.key === 'Enter') fetchWeather(city);
           }}
-          className="search-input"
+          className="search-input" required
         />
         <button onClick={() => fetchWeather(city)} className="search-button">
           Search
