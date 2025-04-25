@@ -101,13 +101,27 @@ function Weather() {
               <div className='city-name'>{weather.location.name}</div>
               <div className="temp-main">{weather.current.temp_c}°C</div>
             </div>
-            <div className="right">
-              <div className="label">Precipitation: {weather.current.condition.text}</div>
-              <div className="label">Humidity: {weather.current.humidity}%</div>
-              <div className="label">Wind: {weather.current.wind_kph} km/h</div>
-              <div className="label">{new Date(weather.location.localtime).toLocaleString()}</div>
+          </div>
+
+          <div className="info-row">
+            <div className="info-card">
+              <span>🌫️</span>
+              <p>{weather.current.condition.text}</p>
+            </div>
+            <div className="info-card">
+              <span>💧</span>
+              <p>Humidity: {weather.current.humidity}%</p>
+            </div>
+            <div className="info-card">
+              <span>🌬️</span>
+              <p>Wind: {weather.current.wind_kph} km/h</p>
+            </div>
+            <div className="info-card">
+              <span>🕒</span>
+              <p>{new Date(weather.location.localtime).toLocaleString()}</p>
             </div>
           </div>
+
 
           <div className="tabs-row">
             <span className="tab active">Temperature</span>

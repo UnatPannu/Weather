@@ -1,0 +1,12 @@
+hr {
+    border: none;
+    margin: 1px 0;
+    background-color: #4da6ff;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0) 60%),
+      radial-gradient(circle at 60% 25%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0) 55%),
+      radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0) 60%),
+      radial-gradient(circle at 75% 80%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0) 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
