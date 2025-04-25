@@ -10,8 +10,8 @@ function Weather() {
   const [geoCity, setGeoCity]=useState('');
   console.log('City:', city, 'GeoCity:', geoCity);
 
-  const fetchWeather = async (query) => {
-    if (!query || query.trim() === '') {
+  const fetchWeather=async (query) => {
+    if (!query|| query.trim() === '') {
       setErrorMsg("Please enter a city name.");
       return;
     }
@@ -19,7 +19,7 @@ function Weather() {
     setLoading(true);
     setErrorMsg('');
     try {
-      const response = await axios.get(
+      const response= await axios.get(
         `https://api.weatherapi.com/v1/forecast.json?key=b15be3905d374fe9a8f65211252304&q=${query}&days=7&aqi=no`
       );
       setCity(response.data.location.name);
